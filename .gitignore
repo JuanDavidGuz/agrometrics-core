@@ -1,0 +1,25 @@
+# Dependencias de Node (Frontend y Backend)
+node_modules/
+dist/
+build/
+
+# Entornos virtuales de Python (Data Pipeline)
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Variables de entorno y credenciales (¡Seguridad!)
+.env
+.env.local
+
+# Archivos de Datos (ETL) - ¡Nunca subir CSVs pesados!
+data_pipeline/data/raw/*
+data_pipeline/data/processed/*
+*.csv
+*.xlsx
+*.json
+
+# Logs y OS
+*.log
+.DS_Store
