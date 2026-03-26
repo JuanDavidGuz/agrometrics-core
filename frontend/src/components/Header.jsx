@@ -13,7 +13,7 @@ export default function Header() {
           overflow: "hidden",
         }}
       >
-        {/* Decorative geometric shapes */}
+        {/* Decorative shapes */}
         <div
           style={{
             position: "absolute",
@@ -51,68 +51,99 @@ export default function Header() {
 
         <div
           className="max-w-7xl mx-auto px-8 md:px-12 py-10 md:py-14"
-          style={{ position: "relative" }}
+          style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            gap: "36px",
+          }}
         >
-          {/* Label chip */}
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              background: "rgba(224,123,42,0.2)",
-              border: "1px solid rgba(224,123,42,0.5)",
-              borderRadius: "20px",
-              padding: "4px 14px",
-              marginBottom: "16px",
-            }}
-          >
-            <span
+          {/* ── Logo ── */}
+          <div style={{ flexShrink: 0 }}>
+            <img
+              src="/Logo moderno AgroMetrics con símbolo natural.png"
+              alt="AgroMetrics logo"
               style={{
-                width: "6px",
-                height: "6px",
-                borderRadius: "50%",
-                background: "#E07B2A",
-                display: "inline-block",
+                height: "clamp(72px, 11vw, 120px)",
+                width: "auto",
+                objectFit: "contain",
+                filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.3))",
               }}
             />
-            <span
-              style={{
-                color: "#f0c48a",
-                fontSize: "11px",
-                fontFamily: "'Georgia', serif",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-              }}
-            >
-              Fedepapa · Sistema de Información
-            </span>
           </div>
 
-          <h1
+          {/* ── Divider ── */}
+          <div
             style={{
-              fontSize: "clamp(28px, 5vw, 48px)",
-              fontWeight: "bold",
-              color: "#FFFFFF",
-              lineHeight: "1.15",
-              fontFamily: "'Georgia', serif",
-              letterSpacing: "-0.02em",
+              width: "1px",
+              height: "72px",
+              background: "rgba(255,255,255,0.18)",
+              flexShrink: 0,
             }}
-          >
-            Tableros de información
-          </h1>
-          <h2
-            style={{
-              fontSize: "clamp(13px, 2vw, 17px)",
-              color: "rgba(255,255,255,0.65)",
-              marginTop: "8px",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              fontFamily: "sans-serif",
-              fontWeight: "300",
-            }}
-          >
-            Del sector papero en Colombia
-          </h2>
+          />
+
+          {/* ── Text ── */}
+          <div>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "rgba(224,123,42,0.2)",
+                border: "1px solid rgba(224,123,42,0.5)",
+                borderRadius: "20px",
+                padding: "4px 14px",
+                marginBottom: "16px",
+              }}
+            >
+              <span
+                style={{
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  background: "#E07B2A",
+                  display: "inline-block",
+                }}
+              />
+              <span
+                style={{
+                  color: "#f0c48a",
+                  fontSize: "11px",
+                  fontFamily: "'Georgia', serif",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                }}
+              >
+                AgroMetrics · Sistema de Información
+              </span>
+            </div>
+
+            <h1
+              style={{
+                fontSize: "clamp(28px, 5vw, 48px)",
+                fontWeight: "bold",
+                color: "#FFFFFF",
+                lineHeight: "1.15",
+                fontFamily: "'Georgia', serif",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Tableros de información
+            </h1>
+            <h2
+              style={{
+                fontSize: "clamp(13px, 2vw, 17px)",
+                color: "rgba(255,255,255,0.65)",
+                marginTop: "8px",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                fontFamily: "sans-serif",
+                fontWeight: "300",
+              }}
+            >
+              Del sector agrícola en Colombia
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -191,13 +222,9 @@ export default function Header() {
       </div>
 
       <style>{`
-        .nav-tab:hover {
-          background: rgba(255,255,255,0.06) !important;
-        }
+        .nav-tab:hover { background: rgba(255,255,255,0.06) !important; }
         @media (max-width: 640px) {
-          .nav-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
+          .nav-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
     </header>
